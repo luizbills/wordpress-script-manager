@@ -7,6 +7,8 @@ Enqueue and concatenates javascript and css files.
 ```php
 <?php
 
+include 'path/to/wp-script-manager.php';
+
 add_action( 'wpsman_add_javascript_files', 'prefix_theme_javascript_files' );
 function prefix_theme_javascript_files () {
 	wpsman_add_javascript( get_stylesheet_directory() .  '/assets/js/framework.js' );
