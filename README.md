@@ -10,9 +10,9 @@ include 'path/to/wp-script-manager.php';
 add_action( 'wpsman_add_javascript_files', 'prefix_theme_javascript_files' );
 function prefix_theme_javascript_files () {
 	// That will concatenate all added javascript files into a build file (by default named as 'scripts.js')
-	wpsman_add_javascript( get_stylesheet_directory() .  '/assets/js/framework.js' );
-	wpsman_add_javascript( get_stylesheet_directory() .  '/assets/js/helper.js' );
-	wpsman_add_javascript( get_stylesheet_directory() .  '/assets/js/app.js' );
+	wpsman_add_javascript( get_stylesheet_directory() . '/assets/js/framework.js' );
+	wpsman_add_javascript( get_stylesheet_directory() . '/assets/js/helper.js' );
+	wpsman_add_javascript( get_stylesheet_directory() . '/assets/js/app.js' );
 }
 
 add_action( 'wpsman_add_css_files', 'prefix_theme_css_files' );
@@ -20,11 +20,11 @@ function prefix_theme_css_files () {
 	global $post;
 	$post_slug = $post->post_name;
 	
-	wpsman_add_css( get_stylesheet_directory() .  '/assets/css/grid.css' );
-	wpsman_add_css( get_stylesheet_directory() .  '/assets/css/layout.css' );
+	wpsman_add_css( get_stylesheet_directory() . '/assets/css/grid.css' );
+	wpsman_add_css( get_stylesheet_directory() . '/assets/css/layout.css' );
 	
 	if ( $post_slug == 'contact' ) {
-		wpsman_add_css( get_stylesheet_directory() .  '/assets/css/contact-page.css' );
+		wpsman_add_css( get_stylesheet_directory() . '/assets/css/contact-page.css' );
 		// tip: change the name of build file (default is 'styles.css') to create another build file
 		// it's useful when you are using a cache plugin
 		add_filter( 'wpsman_css_build_filename', create_function( '$name', 'return "styles-contact.css";' );
