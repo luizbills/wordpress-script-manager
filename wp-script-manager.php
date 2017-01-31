@@ -5,6 +5,8 @@
  * @version 2.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 $upload_dir = wp_upload_dir();
 
 define( 'WPSMAN_VERSION', '2.0.0' );
