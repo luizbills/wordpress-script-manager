@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 function wpsman_build_script_file ( $filename, $file_list ) {
 	$result = false;
 

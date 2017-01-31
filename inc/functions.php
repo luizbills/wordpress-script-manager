@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 function wpsman_add_javascript ( $filepath, $priority = 10 ) {
 	add_filter( 'wpsman_javascript_files', function ( $files ) use ( $filepath ) {
 		$files[] = $filepath;
