@@ -34,8 +34,8 @@ function wpsman_build_javascript_and_css () {
 	// build css
 	do_action( 'wpsman_add_css_files' );
 
-	$ccs_filename = apply_filters( 'wpsman_css_build_filename', 'styles.css' );
-	$csss_files = apply_filters( 'wpsman_css_files', array() );
+	$css_filename = apply_filters( 'wpsman_css_build_filename', 'styles.css' );
+	$css_files = apply_filters( 'wpsman_css_files', array() );
 
 	if ( count( $css_files ) > 0 ) {
 
