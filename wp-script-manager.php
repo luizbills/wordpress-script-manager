@@ -2,14 +2,14 @@
 /**
  * WP Script Manager
  * Enqueue and concatenates javascript and css files.
- * @version 2.0.0
+ * @version 2.1.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 $upload_dir = wp_upload_dir();
 
-define( 'WPSMAN_VERSION', '2.0.0' );
+define( 'WPSMAN_VERSION', '2.1.3' );
 define( 'WPSMAN_SCRIPTS_DIR', $upload_dir['basedir'] . '/wpsman' );
 define( 'WPSMAN_SCRIPTS_URL', $upload_dir['baseurl'] . '/wpsman' );
 
