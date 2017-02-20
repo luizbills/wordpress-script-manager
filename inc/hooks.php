@@ -2,9 +2,12 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-$wpsman_build_priority = apply_filters( 'wpsman_build_priority', 10 );
+add_action( 'after_setup_theme', 'wpsman_enqueue_scripts' );
+function wpsman_enqueue_scripts () {
+	$wpsman_build_priority = apply_filters( 'wpsman_build_priority', 10 );
+	add_action( 'wp_enqueue_scripts', 'wpsman_build_javascript_and_css', $wpsman_build_priority );
+}
 
-add_action( 'wp_enqueue_scripts', 'wpsman_build_javascript_and_css', $wpsman_build_priority );
 function wpsman_build_javascript_and_css () {
 	// build javascript
 	do_action( 'wpsman_add_javascript_files' );
